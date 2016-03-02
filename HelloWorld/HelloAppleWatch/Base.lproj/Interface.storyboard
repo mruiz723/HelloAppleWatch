@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="HelloAppleWatch" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="Qql-gK-wn1">
+                            <items>
+                                <label width="100" alignment="center" verticalAlignment="center" text="Hello World Apple Watch!" textAlignment="center" numberOfLines="0" id="Lzw-E3-d0d">
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                                <button alignment="center" verticalAlignment="bottom" title="Image" id="2Fm-f6-sa4">
+                                    <connections>
+                                        <segue destination="Gz0-5t-rNz" kind="push" identifier="" id="lQV-yb-cDS"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Image-->
+        <scene sceneID="PzB-4u-0q3">
+            <objects>
+                <controller title="Image" id="Gz0-5t-rNz" customClass="ImageInterfaceController" customModule="HelloAppleWatch_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" spacing="8" id="iPE-KZ-ecd">
+                            <items>
+                                <imageView width="44" height="45" alignment="center" image="email" contentMode="scaleAspectFit" id="tdX-Nk-cjZ"/>
+                                <separator alignment="left" id="oSg-Uo-dpF"/>
+                                <imageView width="44" height="45" alignment="center" image="number" contentMode="scaleAspectFit" id="osm-9y-h0l"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="center" title="Table" id="K5H-7E-P2T">
+                            <connections>
+                                <segue destination="ecG-aO-1CA" kind="push" identifier="Table" id="Jec-oR-b4h"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="447" y="347"/>
+        </scene>
+        <!--Jobs-->
+        <scene sceneID="uhE-na-hyI">
+            <objects>
+                <controller identifier="TableInterface" title="Jobs" id="ecG-aO-1CA" customClass="TableInterfaceController" customModule="HelloAppleWatch_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="ag9-0F-ZxD">
+                            <items>
+                                <table alignment="left" id="7aE-Wd-PKa">
+                                    <items>
+                                        <tableRow identifier="JobRow" id="c5R-iB-7SY" customClass="JobRow" customModule="HelloAppleWatch_Extension">
+                                            <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="Tqk-mK-7S1">
+                                                <items>
+                                                    <label alignment="left" text="iOS developer" id="9mu-rZ-Tem"/>
+                                                    <label alignment="left" text="us $ 100.000" id="HUH-tj-u7r"/>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="nameJobLabel" destination="9mu-rZ-Tem" id="kuP-Ig-RRB"/>
+                                                <outlet property="salaryLabel" destination="HUH-tj-u7r" id="ZrN-wg-k7l"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="7aE-Wd-PKa" id="oce-f2-do7"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="643" y="347"/>
+        </scene>
+        <!--Detail Job-->
+        <scene sceneID="0uo-Be-nyM">
+            <objects>
+                <controller identifier="Detail" title="Detail Job" id="tIl-4f-LzF" customClass="DetailJobInterfaceController" customModule="HelloAppleWatch_Extension">
+                    <items>
+                        <group width="1" alignment="left" hidden="YES" layout="vertical" id="yQe-5G-D8R">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text=":-)" textAlignment="center" id="z2r-bh-9Mt">
+                                    <fontDescription key="font" type="system" pointSize="43"/>
+                                </label>
+                                <button width="1" alignment="left" verticalAlignment="bottom" title="OK" id="m5c-1y-Kmc">
+                                    <connections>
+                                        <action selector="ok" destination="tIl-4f-LzF" id="pMM-8t-QGh"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="7NN-Ef-mlB">
+                            <items>
+                                <group width="1" alignment="left" layout="vertical" id="Mf3-sW-Wbz">
+                                    <items>
+                                        <group width="1" alignment="left" id="dht-Sk-1uA">
+                                            <items>
+                                                <label alignment="left" text="Job:" id="242-WB-8d2">
+                                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                </label>
+                                                <label width="87" alignment="left" text="iOS Developer" numberOfLines="0" id="DEO-CV-BSQ">
+                                                    <variation key="device=watch42mm" width="107"/>
+                                                </label>
+                                            </items>
+                                            <edgeInsets key="margins" left="3" right="3" top="0.0" bottom="0.0"/>
+                                        </group>
+                                        <separator alignment="left" id="8cM-99-z4m"/>
+                                        <group alignment="left" id="2LX-i3-4V5">
+                                            <items>
+                                                <label alignment="left" text="Salary:" numberOfLines="0" id="qes-1y-Alj">
+                                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                </label>
+                                                <label width="67" alignment="left" text="US $ 100.000" numberOfLines="0" id="cZk-gk-691">
+                                                    <variation key="device=watch42mm" width="87"/>
+                                                </label>
+                                            </items>
+                                            <edgeInsets key="margins" left="3" right="3" top="0.0" bottom="0.0"/>
+                                        </group>
+                                        <separator alignment="left" id="aDw-8b-8Cb"/>
+                                    </items>
+                                    <edgeInsets key="margins" left="3" right="3" top="0.0" bottom="0.0"/>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="I1l-kg-ARH">
+                                    <items>
+                                        <label alignment="left" text="Description:" id="fV3-Cx-hf7">
+                                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                        </label>
+                                        <label width="1" alignment="left" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." numberOfLines="0" id="7U4-Jv-Fuo"/>
+                                    </items>
+                                    <edgeInsets key="margins" left="3" right="3" top="0.0" bottom="0.0"/>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <menu key="menu" id="Z2w-zO-M6B">
+                        <items>
+                            <menuItem title="Apply" icon="accept" id="8uE-KO-cNE">
+                                <connections>
+                                    <action selector="doApply" destination="tIl-4f-LzF" id="cH9-tz-qsf"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Decline" icon="decline" id="DsV-r2-iKL">
+                                <connections>
+                                    <action selector="doDecline" destination="tIl-4f-LzF" id="wPU-pb-ONj"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="contentGroup" destination="7NN-Ef-mlB" id="mJm-9s-gIg"/>
+                        <outlet property="descriptionLabel" destination="7U4-Jv-Fuo" id="7mn-j8-NoS"/>
+                        <outlet property="jobTitleLabel" destination="DEO-CV-BSQ" id="RBq-k0-wuF"/>
+                        <outlet property="messageGroup" destination="yQe-5G-D8R" id="NeL-qD-dSf"/>
+                        <outlet property="messageLabel" destination="z2r-bh-9Mt" id="2eX-gb-21m"/>
+                        <outlet property="salaryLabel" destination="cZk-gk-691" id="rfF-uk-Hrt"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="854" y="347"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="HelloAppleWatch" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="HelloAppleWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>
